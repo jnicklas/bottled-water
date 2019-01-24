@@ -41,13 +41,13 @@ internal.value.converter=org.apache.kafka.connect.json.JsonConverter
 internal.key.converter.schemas.enable=false
 internal.value.converter.schemas.enable=false
 
-offset.storage.topic=connect-offsets
+offset.storage.topic=${KAFKA_PREFIX}connect-offsets
 offset.storage.replication.factor=3
 
-config.storage.topic=connect-configs
+config.storage.topic=${KAFKA_PREFIX}connect-configs
 config.storage.replication.factor=3
 
-status.storage.topic=connect-status
+status.storage.topic=${KAFKA_PREFIX}connect-status
 status.storage.replication.factor=3
 
 offset.flush.interval.ms=10000
