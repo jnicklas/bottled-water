@@ -6,6 +6,7 @@ DEBEZIUM_CONNECTOR_URL="https://repo1.maven.org/maven2/io/debezium/debezium-conn
 ./setup_certs KAFKA
 
 cat > $DYNO_CONNECT_DISTRIBUTED_PROPERTIES_FILE <<PROPERTIES
+client.id=${KAFKA_PREFIX}${CLIENT_ID}
 producer.security.protocol=SSL
 producer.ssl.truststore.location=$HOME/.truststore.jks
 producer.ssl.truststore.password=$TRUSTSTORE_PASSWORD
